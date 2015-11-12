@@ -1,5 +1,10 @@
 class String
   define_method(:palindrome) do
-    self.downcase()
+    word = self
+    reversed_word = word.downcase().reverse()
+
+    if word != reversed_word
+      return false
+    end
   end
 end
