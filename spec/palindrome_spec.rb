@@ -15,6 +15,10 @@ describe('String#palindrome') do
   end
 
   it("returns true if the string is a palindrome, ignoring punctuation") do
+    expect(("able was i, i saw elba").palindrome()).to(eq(true))
+  end
+
+  it("returns true if the string is a palindrome, case-insensitive") do
     expect(("Able was I, I saw elba").palindrome()).to(eq(true))
   end
 end
