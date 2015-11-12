@@ -1,9 +1,12 @@
 class String
   define_method(:palindrome) do
     word = self
-    reversed_word = word.downcase().reverse()
+    cleaned_word = word.downcase().gsub(/\s+/, "")
+    reversed_word = cleaned_word.reverse()
 
-    if word != reversed_word
+    if cleaned_word == reversed_word
+      return true
+    else
       return false
     end
   end
