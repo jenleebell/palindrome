@@ -13,4 +13,8 @@ describe('String#palindrome') do
   it("returns true if the string is a palindrome, ignoring spacing") do
     expect(("yreka bakery").palindrome()).to(eq(true))
   end
+
+  it("returns true if the string is a palindrome, ignoring punctuation") do
+    expect(("Able was I, I saw elba").palindrome()).to(eq(true))
+  end
 end
